@@ -26,7 +26,7 @@ export class InputService {
         let onlyNumbers = rawValue.replace(/[^0-9]/g, "");
 
         if (!onlyNumbers) {
-            return "";
+            return prefix + suffix;
         }
 
         let integerPart = onlyNumbers.slice(0, onlyNumbers.length - precision).replace(/^0*/g, "").replace(/\B(?=(\d{3})+(?!\d))/g, thousands);
